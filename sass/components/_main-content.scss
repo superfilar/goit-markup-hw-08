@@ -1,0 +1,60 @@
+.main-content {
+    width: 100%;
+    
+    &__order {
+            background-color: $background-color_3;
+            display: flex;
+            justify-content: center;
+            padding: 170px 0px;
+            background-image: url('../images/team-work.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            box-shadow: inset 1600px 600px #2f303a66;
+            background-size: contain;
+            min-width: 1600px;
+    
+            h1 {
+                text-align: center;
+                @include font-style(44px, 900, 0.06em, 136%);
+                text-transform: uppercase;
+            }
+            &_items {
+                @include flex(column);
+                justify-content: center;
+                align-items: center;
+                padding-left: 0;
+            }
+            &_item{
+                &_button {
+                    background-color: $background-color_2;
+                    color: $color_5;
+                    box-shadow: $shadow_1 $shadow-color_1;
+                    border-radius: 4px;
+                    @include font-style(16px, 700, 0.06em, 188%);
+                    text-align: center;
+                    padding: 10px 41px;
+                }
+                &--white-text {
+                    color: $color_5;
+                }
+            }
+        }
+    &__team {
+        background-color: $background-color_4;
+        display: flex;
+        justify-content: center;
+        @include default-padding;
+    }
+    &__clients {
+        @include flex(column);
+        align-items: center;
+        text-align: center;
+        @include default-padding;
+    }
+    &_main-container {
+        margin: 0;
+        @include flex(column);
+        justify-content: center;
+        align-items: center;
+    }
+}

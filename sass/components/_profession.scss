@@ -1,0 +1,42 @@
+.profession {
+    @include default-width;
+    @include default-padding;
+
+    &__title {
+        @include font-style(36px, 700, 0.03em, 117%);
+        text-align: center;
+    }
+    &__item {
+        padding-left: 30px;
+    }
+    &__item-container {
+        width: 370px;
+        height: 294px;
+        position: relative;
+    }
+    &__item-content {
+        position: absolute;
+        bottom: 0px;
+        width: 370px;
+        height: 70px;
+        background: $background-color_5;
+    }
+    &__item-title {
+        @include font-style(14px, 700, 0.03em, 16px);
+        text-align: center;
+        text-transform: uppercase;
+        color: $color_5;
+        padding: 27px 90px;
+        margin: 0px;
+    }
+    &__items-list {
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+    }
+}
+li.profession__item {
+    &:first-child {
+        padding-left: 0px;
+    }
+}

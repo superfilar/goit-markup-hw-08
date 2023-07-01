@@ -1,0 +1,65 @@
+$color_1: #212121;
+$color_2: #2196F3;
+$color_3: #FFF;
+$color_4: #757575;
+$color_5: #FFFFFF;
+$color_6: #ffffff;
+$color_7: #ffffff99;
+$color_8: #75757580;
+
+$svg-color_1: #2196F3;
+$svg-color_2: #757575;
+$svg-color_3: #FFF;
+$svg-color_4:#212121;
+$svg-color_5: #AFB1B8;
+
+$border-color_1: #2196F3;
+$border-color_2:#EEEEEE;
+$border-color_3: #AFB1B8;
+$border-color_4: #0000001a;
+$border-color_5: #21212133;
+$border-color_6: #ffffff4d;
+$border-color_7: #ECECEC;
+
+$default-border: 1px solid;
+
+@mixin border{
+    border: 1px solid $border-color;
+}
+
+$shadow_1: 0px 4px 4px;
+$shadow-color_1: #00000026;
+$shadow-color_2: #0000001f;
+
+$default-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$font-family_1: 'Roboto';
+$font-family_2: 'Raleway';
+
+@mixin font-style($size, $weight, $spacing, $height){
+    font-size: $size;
+    font-weight: $weight;/*400 500 700 900*/
+    letter-spacing: $spacing;
+    line-height: $height;
+}
+
+$background-color_1: #FFFFFF;
+$background-color_2: #2196F3;
+$background-color_3: #2F303A;
+$background-color_4: #F5F4FA;
+$background-color_5: #2f303acc;
+$background-color_6: #2196f3e6;
+$background-color_7: #00000033;
+
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin default-padding{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+@mixin default-width{
+    width: 1200px;
+}

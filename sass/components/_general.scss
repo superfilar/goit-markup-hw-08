@@ -1,0 +1,54 @@
+body {
+    background-color: $background-color_1;
+    color: $color_1;
+    font-family: $font-family_1;
+    @include flex(column);
+}
+
+.section {
+    @include default-padding;
+}
+
+.container {
+    @include default-width;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color_1;
+    display: inline-block;
+    padding: 1px;
+}
+
+button {
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.address{
+
+    &__address {
+        color: $color_6;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 9px;
+    }
+    &__mail {
+        text-decoration-line: underline;
+        color: $color_7;
+        margin: 0;
+    }
+    &__tel {
+        color: $color_7;
+        padding-bottom: 60px;
+        margin: 0;
+        padding-top: 9px;
+    }
+}

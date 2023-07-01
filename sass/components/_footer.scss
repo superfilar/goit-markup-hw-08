@@ -1,0 +1,143 @@
+.page-footer {
+    background-color: $background-color_3;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 252px;
+
+    &__address {
+        p {
+            &:hover {
+                color: $color_2;
+            }
+    
+            &:focus {
+                color: $color_2;
+            }
+    
+            @include font-style(14px, 400, 0.03em, 171%);
+        }
+    }
+    &__container {
+        @include default-width;
+        @include flex(row);
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__logo {
+        margin: 0;
+        font-family: $font-family_2;
+        @include font-style(26px, 1, 0.03em, 119%);
+
+        &-blue {
+            color: $color_2;
+        }
+        &-white {
+            color: $color_3;
+        }
+        &-link {
+            width: 145px;
+            height: 31px;
+            transition: $default-transition;
+        }
+    }
+    &__contact {
+        margin-right: 70px;
+        height: 100%;
+        padding-top: 60px;
+    }
+    &__middle {
+        height: 100%;
+        padding-top: 72px;
+
+        &-title {
+            @include font-style(14px, 700, 0.03em, 1);
+            color: $color_5;
+            margin: 0;
+        }
+    }
+    &__right {
+        padding-top: 72px;
+        margin-left: 78px;
+        height: 100%;
+    }
+    &__socials{
+        
+        &-list {
+            padding-left: 0;
+            @include flex(row);
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        &-item {
+            width: 44px;
+            height: 44px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff1a;
+            border-radius: 50%;
+            transition: $default-transition;
+        
+            &:first-child {
+                margin-left: 0;
+            }
+        
+            &:hover {
+                background: $background-color_2;
+                border-radius: 50%;
+            }
+        
+            &:focus {
+                background: $background-color_2;
+                border-radius: 50%;
+            }
+        }
+        &-vector {
+            fill: $svg-color_3;
+        }
+    }
+}
+
+.form-footer{
+
+    &__label {
+        @include font-style(14px, 700, 0.03em, 1);
+        color: $color_5;
+        margin: 0;
+    }
+    &__vector {
+        fill: $svg-color_3;
+        margin-left: 24px;
+    }
+    &__button {
+        width: 200px;
+        height: 50px;
+        background: $background-color_2;
+        box-shadow: $shadow_1 $shadow-color_1;
+        border-radius: 4px;
+        color: $color_5;
+        @include font-style(16px, 700, 0, 188%);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__container {
+        display: flex;
+        margin-top: 20px;
+    }
+    &__input {
+        border: $default-border $border-color_6;
+        filter: drop-shadow($shadow_1 $shadow-color_1);
+        border-radius: 4px;
+        background: $background-color_3;
+        width: 358px;
+        height: 50px;
+        padding-left: 15px;
+        margin-right: 12px;
+        color: $color_5;
+    }
+}

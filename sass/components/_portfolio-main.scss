@@ -1,0 +1,45 @@
+.portfolio-main {
+    margin: 0;
+    @include flex(column);
+    justify-content: center;
+    align-items: center;
+    @include default-padding;
+
+    ul {
+        padding-left: 0;
+    }
+    &__filter {
+        text-align: center;
+        display: flex;
+        align-items: row;
+        justify-content: center;
+    }
+    &__filter-button {
+        background-color: $background-color_4;
+        border-radius: 4px;
+        padding: 10px 41px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 34px;
+        @include font-style(16px, 500, 3%, 162%);
+        transition: $default-transition;
+    
+        &:hover {
+            background-color: $background-color_2;
+            color: $color_6;
+            box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px $shadow-color_2;
+        }
+    
+        &:focus {
+            background-color: $background-color_2;
+            color: $color_6;
+            box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px $shadow-color_2;
+        }
+    }
+    &__container {
+        @include default-width;
+    }
+    &__projects-container {
+        @include default-width;
+    }
+}

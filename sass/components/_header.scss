@@ -1,0 +1,77 @@
+.main-page-header {
+    border-bottom: $default-border $border-color_7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__menu {
+        @include flex(row);
+    }
+    &__container {
+        @include flex(row);
+        justify-content: space-between;
+        align-items: center;
+        @include default-width;
+    }
+    &__logo {
+        padding-right: 100px;
+        font-family: $font-family_2;
+        @include font-style(26px, 1, 0.03em, 119%);
+        display: flex;
+
+        &--black-text {
+            color: $color_1;
+        }
+        &--blue-text {
+            color: $color_2;
+        }
+    }
+    &__contact{
+        &-link {
+            &:hover {
+                color: $color_2;
+        
+                svg {
+                    fill: $svg_color_1;
+                }
+            }
+        
+            &:focus {
+                color: $color_2;
+        
+                svg {
+                    fill: $svg_color_1;
+                }
+            }
+        
+            color: $color_4;
+            @include font-style(14px, 500, 0.02em, 1);
+            font-family: $font-family_1;
+            @include flex(row);
+            justify-content: space-between;
+            transition: $default-transition;
+        }
+        &-items {
+            margin: 0;
+            padding-left: 0px;
+            @include flex(row);
+            justify-content: center;
+        }
+        &-item {
+            &:first-child {
+                padding-right: 30px;
+            }
+        
+            align-items: center;
+            position: relative;
+            margin-left: 30px;
+        }
+        &-vector {
+            fill: $svg-color_2;
+            left: -22px;
+            top: 2px;
+            transition: fill $default-transition;
+            position: absolute;
+        }
+    }
+}

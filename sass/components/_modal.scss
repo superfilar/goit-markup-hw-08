@@ -1,0 +1,215 @@
+.modal {
+    position: fixed;
+    background: $background-color_7;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: unset;
+    transition: transform $default-transition;
+    z-index: 3;
+
+    &--is-hidden {
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(0) rotate(0) skew(0);
+    }
+    &__window {
+        position: absolute;
+        width: 528px;
+        height: 581px;
+        box-shadow: 0px 1px 3px $shadow-color_2, 0px 1px 1px #00000024, 0px 2px 1px #00000033;
+        border-radius: 4px;
+        background: $background-color_1;
+        overflow: hidden;
+    }
+    &__form {
+        @include flex(column);
+        align-items: center;
+
+        &-container {
+            @include flex(column);
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin-top: 40px;
+        }
+        &-title {
+            @include font-style(20px, 900, 0.03em, 1);
+            color: $color_1;
+            margin: 0px;
+        }
+        &-item {
+            @include flex(column);
+            position: relative;
+        }
+        &-items-list {
+            @include flex(column);
+            align-content: space-between;
+            width: 448px;
+            padding: 0px;
+            margin: 0px;
+        }
+        &-vector {
+            position: absolute;
+            top: 55%;
+            left: 13px;
+            fill: $svg-color_4;
+            transition: fill $default-transition;
+        }
+        &-textarea {
+            &:focus {
+                border: $default-border $border-color_1;
+            }
+        
+            &:hover {
+                border: $default-border $border-color_1;
+            }
+        
+            border: $default-border $border-color_5;
+            border-radius: 4px;
+            @include font-style(12px, 400, 0.01em, 1);
+            color: $color_8;
+            padding: 12px 16px;
+            width: 448px;
+            height: 120px;
+            resize: none;
+            margin-top: 5px;
+            transition: border $default-transition;
+        }
+        &-input {
+            &:focus {
+                svg {
+                    fill: $svg_color_1;
+                }
+            }
+        
+            &:hover {
+                svg {
+                    fill: $svg_color_1;
+                }
+            }
+        }
+        &-input-checkbox {
+            &:checked+.modal__checkbox-icon {
+                content: '';
+                visibility: visible;
+            }
+        
+            width: 16px;
+            height: 15px;
+            border: 2px solid #000000;
+            border-radius: 2px;
+            position: absolute;
+            top: 37%;
+            left: 10px;
+            display: none;
+        }
+        &-agreement {
+            @include flex(row);
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            padding: 0;
+            position: relative;
+        }
+        &-agreement-text {
+            padding-left: 15px;
+            margin-top: 16px;
+            margin-bottom: 30px;
+            @include font-style(14px, 400, 0.03em, 171%);
+            color: $color_4;
+        
+            &::before {
+                position: absolute;
+                margin: auto;
+                width: 16px;
+                height: 15px;
+                content: '';
+                background: $background-color_1;
+                border-radius: 2px;
+                border: #000000 solid 2px;
+                top: 20px;
+                left: 10px;
+            }
+        
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-agreement-text-link {
+            text-decoration-line: underline;
+            color: $color_2;
+        }
+        &-label {
+            @include font-style(12px, 400, 0.01em, 100%);
+            color: $color_4;
+            padding-top: 10px;
+            padding-bottom: 4px;
+        }
+        &-button {
+            position: absolute;
+            top: 85%;
+            left: 30%;
+            width: 200px;
+            height: 50px;
+            background: $background-color_2;
+            box-shadow: $shadow_1 $shadow-color_1;
+            border-radius: 4px;
+            @include font-style(16px, 700, 0.06em, 188%);
+            color: $color_5;
+        }
+    }
+    &_form-input {
+        width: 448px;
+        height: 40px;
+        border: $default-border $border-color_5;
+        border-radius: 4px;
+        margin-top: 5px;
+        @include font-style(12px, 400, 0.03em, 14px);
+        padding-left: 35px;
+        transition: border $default-transition;
+    
+        &:focus {
+            border: $default-border $border-color_1;
+        }
+    
+        &:hover {
+            border: $default-border $border-color_1;
+        }
+    }
+    &__close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 2px;
+        border: $default-border $border-color_4;
+        background: $background-color_1;
+        border-radius: 50%;
+    }
+    &__checkbox-icon {
+        position: absolute;
+        margin: auto;
+        width: 16px;
+        height: 15px;
+        display: block;
+        visibility: hidden;
+        top: 20px;
+        left: 10px;
+        background: $background-color_2;
+        border-radius: 2px;
+        z-index: 2;
+        transition: $default-transition;
+    }
+    &__checkbox-vector {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        fill: $svg-color_3;
+    }
+}

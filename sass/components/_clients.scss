@@ -1,0 +1,49 @@
+.clients{
+
+    &__container {
+        @include default-width;
+    }
+    &__title {
+        @include font-style(36px, 700, 0.03em, 42px);
+    }
+    &__item {
+        border: $default-border $border-color_3;
+        width: 170px;
+        height: 92px;
+        border-radius: 4px;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border $default-transition;
+    
+        &:first-child {
+            margin-left: 0;
+        }
+    
+        &:hover {
+            border: $default-border $border-color_1;
+    
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+    
+        &:focus {
+            border: $default-border $border-color_1;
+    
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+    }
+    &__item-vector {
+        fill: $svg-color_5;
+        transition: fill $default-transition;
+    }
+    &__items-list {
+        @include flex(row);
+        justify-content: space-between;
+        padding-left: 0;
+    }
+}
