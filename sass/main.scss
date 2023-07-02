@@ -1,3 +1,9 @@
 @use "./utils/_variables" as *;
 
 @import './components/general', './components/main-content', './components/header', './components/footer', './components/navigation', './components/modal', './components/portfolio-main', './components/profession', './components/team', './components/main-container', './components/projects', './components/clients';
+@import './components/ex-menu';
+
+/*linia wokół elementów testowe
+*{
+    outline: 1px dashed rgba(243, 9, 9, 0);
+}*/

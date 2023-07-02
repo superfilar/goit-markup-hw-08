@@ -1,25 +1,22 @@
+@media (max-width:480px){
 .clients{
 
     &__container {
-        @include default-width;
+        width: 470px;
     }
     &__title {
         @include font-style(36px, 700, 0.03em, 42px);
     }
     &__item {
         border: $default-border $border-color_3;
-        width: 170px;
+        width: 48%;
         height: 92px;
         border-radius: 4px;
-        margin-left: 30px;
-        display: flex;
         align-items: center;
         justify-content: center;
         transition: border $default-transition;
-    
-        &:first-child {
-            margin-left: 0;
-        }
+        display: flex;
+        margin: 2% 0;
     
         &:hover {
             border: $default-border $border-color_1;
@@ -42,8 +39,117 @@
         transition: fill $default-transition;
     }
     &__items-list {
+        width: 100%;
+        @include flex(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}}
+@media (min-width:481px){
+.clients {
+
+    &__container {
+        width: 100%;
+    }
+
+    &__title {
+        @include font-style(36px, 700, 0.03em, 42px);
+    }
+
+    &__item {
+        border: $default-border $border-color_3;
+        width: 226px;
+        height: 92px;
+        border-radius: 4px;
+        margin: 0 15px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border $default-transition;
+
+
+        &:hover {
+            border: $default-border $border-color_1;
+
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+
+        &:focus {
+            border: $default-border $border-color_1;
+
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+    }
+
+    &__item-vector {
+        fill: $svg-color_5;
+        transition: fill $default-transition;
+    }
+
+    &__items-list {
+        @include flex(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 0;
+    }
+}}
+@media (min-width:769px){
+.clients {
+
+    &__container {
+        @include default-width;
+    }
+
+    &__title {
+        @include font-style(36px, 700, 0.03em, 42px);
+    }
+
+    &__item {
+        border: $default-border $border-color_3;
+        width: 170px;
+        height: 92px;
+        border-radius: 4px;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border $default-transition;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            border: $default-border $border-color_1;
+
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+
+        &:focus {
+            border: $default-border $border-color_1;
+
+            svg {
+                fill: $svg_color_1;
+            }
+        }
+    }
+
+    &__item-vector {
+        fill: $svg-color_5;
+        transition: fill $default-transition;
+    }
+
+    &__items-list {
         @include flex(row);
         justify-content: space-between;
         padding-left: 0;
     }
-}
+}}

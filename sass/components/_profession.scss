@@ -1,3 +1,4 @@
+@media (min-width:769px){
 .profession {
     @include default-width;
     @include default-padding;
@@ -39,4 +40,8 @@ li.profession__item {
     &:first-child {
         padding-left: 0px;
     }
-}
+}}
+@media (max-width:768px){
+.profession {
+    display:none;
+}}

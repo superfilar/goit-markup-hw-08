@@ -14,7 +14,6 @@
     <title>Studio</title>
   </head>
   <body>
-
     <div class="modal modal--is-hidden" data-modal>
       <div class="modal__window">
         <!--przycisk zamykania okna modalnego-->
@@ -75,14 +74,62 @@
               </input>
             <span class="modal__form-agreement-text">Oświadczam iż akceptuję <a class="modal__form-agreement-text-link" href="">Regulamin</a> i <a class="modal__form-agreement-text-link" href="">Politykę Prywatności.</a></span>
           </label>
-          <button class="modal__form-button" type="submit">Wyślij</button>
+          <div class="modal__form-button-box"><button class="modal__form-button" type="submit">Wyślij</button></div>
           </form>
         </div>
       </div>
     </div>
-
     <header class="main-page-header">
       <div class="main-page-header__container">
+
+      <div class="ex-menu js-ex-menu" id="mobile-menu">
+        <button class="ex-menu__button js-close-menu">
+          <a class="ex-menu__button-link">
+            <svg class="ex-menu__vector"  width="19px" height="19px">
+            <use href="./images/icons.svg#icon-mobile-menu-close"></use>
+          </svg></a>
+        </button>
+        <div class="ex-menu__nav-container">
+          <ul class="ex-menu__nav-list">
+            <li class="ex-menu__nav-item">
+              <a class="ex-menu__nav-link" href="index.html">
+                <span>Agencja</span></a></li>
+            <li class="ex-menu__nav-item">
+              <a class="ex-menu__nav-link" href="portfolio.html">
+                <span>Portfolio</span></a></li>
+            <li class="ex-menu__nav-item">
+              <a class="ex-menu__nav-link" href="./kontakt">
+                <span>Kontakt</span></a></li>
+          </ul>
+        </div>
+        <div class="ex-menu__contact-container">
+          <ul class="ex-menu__contact-list">
+            <li class="ex-menu__contact-item">
+              <a class="ex-menu__contact-link" href="tel:+48111111111">
+                <span>+48 111 111 111</span></a></li>
+            <li class="ex-menu__contact-item">
+              <a class="ex-menu__contact-link" href="mailto:info@devstudio.com">
+                <span>info@devstudio.com</span></a></li>
+          </ul>
+        </div>
+        <div class="ex-menu__socials-container">
+          <ul class="ex-menu__socials-list">
+            <li class="ex-menu__socials-item">
+              <a class="ex-menu__socials-link" href="">
+                <span>Instagram</span></a></li>
+            <li class="ex-menu__socials-item">
+              <a class="ex-menu__socials-link" href="">
+                <span>Twitter</span></a></li>
+            <li class="ex-menu__socials-item">
+              <a class="ex-menu__socials-link" href="">
+                <span>Facebook</span></a></li>
+            <li class="ex-menu__socials-item">
+              <a class="ex-menu__socials-link" href="">
+                <span>LinkedIn</span></a></li>
+          </ul>
+        </div>
+      </div>
+
         <div class="main-page-header__menu">
           <a class="main-page-header__logo-link" href="index.html" rel="noopener noreferrer nofollow">
             <p class="main-page-header__logo">
@@ -90,6 +137,16 @@
               <span class="main-page-header__logo--black-text">Studio</span>
             </p>
           </a>
+          <button
+          class="ex-menu__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+        <a class="ex-menu__button-link">
+          <svg class="ex-menu__vector"  width="24px" height="16px">
+              <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg></a>
+        </button>
           <nav class="page-nav">
             <!--Nawigacja strony-->
             <div class="page-nav__element">
@@ -311,20 +368,17 @@
                 <source
                   srcset="./images/team1.avif"
                   type="image/avif"
-                  width="270"
-                  height="260"
+                  width="100%"
                 />
                 <source
                   srcset="./images/team1.png"
                   type="image/png"
-                  width="270"
-                  height="260"
+                  width="100%"
                 />
                 <img
                   src="./images/team1.jpg"
                   alt="Uśmiechnięty Joe Doe w okularach i polo"
-                  width="270"
-                  height="260"
+                  width="100%"
                 />
               </picture>
               <!--Opis osoby 1-->
@@ -359,20 +413,20 @@
                 <source
                   srcset="./images/team2.avif"
                   type="image/avif"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <source
                   srcset="./images/team2.png"
                   type="image/png"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <img
                   src="./images/team2.jpg"
                   alt="Pewna siebie blond włosa Joe w żakiecie"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
               </picture>
               <!--Opis osoby 2-->
@@ -407,20 +461,20 @@
                 <source
                   srcset="./images/team3.avif"
                   type="image/avif"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <source
                   srcset="./images/team3.png"
                   type="image/png"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <img
                   src="./images/team3.jpg"
                   alt="Szczęśliwy Joe w jasnej koszuli"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
               </picture>
               <!--Opis osoby 3-->
@@ -455,20 +509,20 @@
                 <source
                   srcset="./images/team4.avif"
                   type="image/avif"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <source
                   srcset="./images/team4.png"
                   type="image/png"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
                 <img
                   src="./images/team4.jpg"
                   alt="Zadowolony Joe w okularach i t-shircie"
-                  width="270"
-                  height="260"
+                  width="100%"
+                  
                 />
               </picture>
               <!--Opis osoby 4-->
@@ -598,5 +652,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
