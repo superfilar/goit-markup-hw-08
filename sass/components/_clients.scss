@@ -1,4 +1,4 @@
-@media (max-width:480px){
+@media (max-width:767px){
 .clients{
 
     &__container {
@@ -46,7 +46,7 @@
         padding: 0 10px;
     }
 }}
-@media (min-width:481px){
+@media (1199px>=width>=768px){
 .clients {
 
     &__container {
@@ -95,15 +95,14 @@
     &__items-list {
         @include flex(row);
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         padding-left: 0;
     }
 }}
-@media (min-width:769px){
+@media (min-width:1200px){
 .clients {
-
     &__container {
-        @include default-width;
+        width:100%;
     }
 
     &__title {
@@ -115,15 +114,11 @@
         width: 170px;
         height: 92px;
         border-radius: 4px;
-        margin-left: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: border $default-transition;
-
-        &:first-child {
-            margin-left: 0;
-        }
+        margin: 5px 10px;
 
         &:hover {
             border: $default-border $border-color_1;
@@ -149,7 +144,9 @@
 
     &__items-list {
         @include flex(row);
-        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-left: 0;
     }
 }}

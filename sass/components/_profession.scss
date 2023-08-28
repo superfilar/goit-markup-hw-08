@@ -1,6 +1,10 @@
-@media (min-width:769px){
+@media (max-width:1199px) {
+    .profession {
+        display: none;
+    }
+}
+@media (min-width:1200px){
 .profession {
-    @include default-width;
     @include default-padding;
 
     &__title {
@@ -8,7 +12,7 @@
         text-align: center;
     }
     &__item {
-        padding-left: 30px;
+        margin: 1vw;
     }
     &__item-container {
         width: 370px;
@@ -31,7 +35,9 @@
         margin: 0px;
     }
     &__items-list {
-        display: flex;
+        width: 100%;
+        @include flex(row);
+        flex-wrap: wrap;
         justify-content: center;
         padding-left: 0px;
     }
@@ -40,8 +46,4 @@ li.profession__item {
     &:first-child {
         padding-left: 0px;
     }
-}}
-@media (max-width:768px){
-.profession {
-    display:none;
 }}

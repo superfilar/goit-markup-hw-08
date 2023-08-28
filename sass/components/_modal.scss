@@ -1,4 +1,4 @@
-@media (max-width:480px){
+@media (max-width:767px){
 .modal {
     position: fixed;
     background: $background-color_7;
@@ -215,7 +215,7 @@
         fill: $svg-color_3;
     }
 }}
-@media (min-width:481px){
+@media (1199px>=width>=768px){
 .modal {
     position: fixed;
     background: $background-color_7;
@@ -449,7 +449,7 @@
         fill: $svg-color_3;
     }
 }}
-@media (min-width:769px){
+@media (min-width:1200px){
 .modal {
     position: fixed;
     background: $background-color_7;

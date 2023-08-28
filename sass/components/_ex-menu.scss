@@ -1,4 +1,4 @@
-@media (max-width:480px){
+@media (max-width:767px){
 .ex-menu {
     position: fixed;
     top: 0;
@@ -127,7 +127,7 @@
     }
 
 }}
-@media (min-width:481px){
+@media (1199px>=width>=768px){
 .ex-menu__button {
     display: none;
 }
@@ -135,7 +135,7 @@
    display: none;
 }}
 
-@media (min-width:769px){
+@media (min-width:1200px){
 .ex-menu__button {
     display:none;
 }

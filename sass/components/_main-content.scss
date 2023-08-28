@@ -1,4 +1,4 @@
-@media (max-width:480px){
+@media (max-width:767px){
 .main-content {
         width: 100%;
 
@@ -69,21 +69,26 @@
             align-items: center;
         }
 }}
-@media (min-width:481px) {
+@media (1199px>=width>=768px) {
     .main-content {
         width: 100%;
+        @include flex(column);
+            justify-content: center;
+            align-items: center;
 
         &__order {
             background-color: $background-color_3;
-            display: flex;
-            justify-content: center;
-            background-image: url('../images/team-work.png');
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            box-shadow: inset 1600px 600px rgba(47, 48, 58, 40%);
-            background-size: cover;
-            padding-top: 90px;
-            height:400px;
+                display: flex;
+                justify-content: center;
+                padding: 10vw 0px;
+                background-image: url(../images/team-work.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                box-shadow: inset 10000px 6000px rgba(47, 48, 58, 40%);
+                background-size: cover;
+                min-width: 600px;
+                height: 400px;
+                width: 100%;
 
             h1 {
                 text-align: center;
@@ -137,27 +142,33 @@
         }
     }
 }
-@media (min-width:769px) {
+@media (min-width:1200px) {
 .main-content {
         width: 100%;
+        @include flex(column);
+        justify-content: center;
+        align-items: center;
 
         &__order {
             background-color: $background-color_3;
             display: flex;
             justify-content: center;
-            padding: 170px 0px;
+            align-items: center;
             background-image: url(../images/team-work.png);
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            box-shadow: inset 1600px 600px rgba(47, 48, 58, 40%);
-            background-size: contain;
-            min-width: 1600px;
-            height:600px;
-            @include default-width;
+            box-shadow: inset 10000px 6000px rgba(47, 48, 58, 40%);
+            background-size: cover;
+            min-width: 600px;
+            height: 600px;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
 
             h1 {
                 text-align: center;
-                @include font-style(44px, 900, 0.06em, 136%);
+                @include font-style(3em, 900, 0.06em, 136%);
                 text-transform: uppercase;
             }
 
@@ -174,7 +185,7 @@
                     color: $color_5;
                     box-shadow: $shadow_1 $shadow-color_1;
                     border-radius: 4px;
-                    @include font-style(16px, 700, 0.06em, 188%);
+                    @include font-style(1em, 700, 0.06em, 188%);
                     text-align: center;
                     padding: 10px 41px;
                 }
@@ -187,9 +198,9 @@
 
         &__team {
             background-color: $background-color_4;
-            display: flex;
-            justify-content: center;
             @include default-padding;
+            width: 100%;
+            max-width: 1200px;
         }
 
         &__clients {
